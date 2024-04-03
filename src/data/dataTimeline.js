@@ -17,7 +17,7 @@ const dataTimeline = [
     {
         id: 4,
         title: "2019",
-        description: "Elaboration d’une nouvelle carte."
+        description: "Élaboration d’une nouvelle carte."
     },
     {
         id: 5,

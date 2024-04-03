@@ -44,7 +44,7 @@ export default function Accueil() {
               <h1>L'Escargot Bleu</h1>
               <p>
                 L'Escargot Bleu est un bistrot français où règne bon vivre et bonne humeur à toute heure de la journée. </p>
-                <p>Nous proposons toute sorte de plat variés pour que tout le monde y trouve son bonheur.</p>
+                <p>Nous proposons toute sorte de plats variés pour que tout le monde y trouve son bonheur.</p>
             </div>
             <motion.div
             initial={{opacity:0, scale:0.5}}
