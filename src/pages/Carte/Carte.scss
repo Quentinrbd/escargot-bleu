@@ -1,0 +1,67 @@
+.carte {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+
+    .boisson {
+        height: fit-content;
+        background-color: white;
+        color: black;
+        padding: 25px;
+        width: 500px;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .menu {
+        height: fit-content;
+        padding: 25px;
+        background-color: white;
+        color: black;
+        width: 700px;
+
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+#title {
+    color: white;
+    text-align: center;
+}
+
+.prop {
+    display: flex;
+    justify-content: space-between;
+
+    .detail {
+        font-style: oblique;
+        font-size: 1.5vh;
+    }
+}
+
+#title {
+    font-size: 6.5vh;
+    color: #D7F3E6;
+}
+
+@media (max-width: 800px) {
+    .carte {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .boisson {
+        width: 300px !important;
+    }
+
+    .menu {
+        width: 300px !important;
+        margin-top: 50px;
+    }
+}
