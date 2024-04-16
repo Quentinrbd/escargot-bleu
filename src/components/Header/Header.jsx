@@ -8,37 +8,19 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default function Header() {
-  const [mobile, setMobile] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="header">
-        <div className="logo">
-          <NavLink to="/"><img src={logo} alt="logo" id="logo" /></NavLink>
-        </div>
-
-        <div>
-          <ul id="nav" className={mobile ? '#nav active' : '#nav'}>
-            <li>
-              <NavLink to="/">Accueil</NavLink>
-            </li>
-            <li>
-              <NavLink to="/restaurant">Le restaurant</NavLink>
-            </li>
-            <li>
-              <NavLink to="/menu">Notre carte</NavLink>
-            </li>
-          </ul>          
-        </div>
-
-        <div className="mobile">
-          <div onClick={() => setMobile(true)} className={mobile ? 'hidden' : 'visible'}>
-            <FontAwesomeIcon icon={faBars} size='2xl' />
-          </div>
-
-          <div onClick={() => setMobile(false)} className={mobile ? 'visible' : 'hidden'}>
-            <FontAwesomeIcon icon={faTimes} size='2xl'/>
-          </div>
-        </div>
+    <div className="navbar">
+      <img src={logo} alt="" className="nav-logo" />
+      <div className={`nav-items ${isOpen && "open"}`}>
+        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/restaurant">Le restaurant</NavLink>
+        <NavLink to="/menu">Notre carte</NavLink>
+      </div>
+      <div className={`nav-toggle ${isOpen && "open"}`} onClick={() => setIsOpen(!isOpen)}>
+        <div className="bar"></div>
+      </div>
     </div>
   )
 }
